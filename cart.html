@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+
+    <!-- Display the cart items here -->
+    <div id="cartItems" class="cart-items-container"></div>
+
+    <!-- Display the cart total -->
+    <p>Cart Total: <span id="cartTotal">Rs.0</span></p>
+
+    <!-- Checkout options -->
+    <a href="payment.html"> <button onclick="checkout()">Checkout</button></a>
+
+    <!-- Flower products -->
+    <div class="product">
+        <img src="https://images.pexels.com/photos/2300713/pexels-photo-2300713.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Rose" width="200">
+        <h3>Rose</h3>
+        <p class="price">Rs.10</p>
+        <label for="quantity_rose">Quantity:</label>
+        <input type="number" id="quantity_rose" name="quantity_rose" min="1" value="1">
+        <input type="hidden" id="price_rose" value="10.00">
+        <button type="button" onclick="addToCart('Rose', parseFloat(document.getElementById('price_rose').value), 'quantity_rose');">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.pexels.com/photos/36729/tulip-flower-bloom-pink.jpg?auto=compress&cs=tinysrgb&w=600" alt="Tulip" width="200">
+        <h3>Tulip</h3>
+        <p class="price">Rs.8</p>
+        <label for="quantity_tulip">Quantity:</label>
+        <input type="number" id="quantity_tulip" name="quantity_tulip" min="1" value="1">
+        <input type="hidden" id="price_tulip" value="8.00">
+        <button type="button" onclick="addToCart('Tulip', parseFloat(document.getElementById('price_tulip').value), 'quantity_tulip');">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.pexels.com/photos/424134/pexels-photo-424134.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lily" width="200">
+        <h3>Lily</h3>
+        <p class="price">Rs.12</p>
+        <label for="quantity_lily">Quantity:</label>
+        <input type="number" id="quantity_lily" name="quantity_lily" min="1" value="1">
+        <input type="hidden" id="price_lily" value="12.00">
+        <button type="button" onclick="addToCart('Lily', parseFloat(document.getElementById('price_lily').value), 'quantity_lily');">Add to Cart</button>
+    </div>
+
+    <!-- Placeholder for Mosses -->
+    <div class="product">
+        <img src="https://images.pexels.com/photos/985108/pexels-photo-985108.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mosses" width="200">
+        <h3>Mosses</h3>
+        <p class="price">Rs.15</p>
+        <label for="quantity_mosses">Quantity:</label>
+        <input type="number" id="quantity_mosses" name="quantity_mosses" min="1" value="1">
+        <input type="hidden" id="price_mosses" value="15.00">
+        <button type="button" onclick="addToCart('Mosses', parseFloat(document.getElementById('price_mosses').value), 'quantity_mosses');">Add to Cart</button>
+    </div>
+    
+        <!-- Mosses details go here -->
+    </div>
+
+    <!-- Placeholder for Liverwort -->
+    <div class="product">
+        <img src="https://images.pexels.com/photos/17936776/pexels-photo-17936776/free-photo-of-close-up-of-a-pink-rose-flower.png?auto=compress&cs=tinysrgb&w=600" alt="Liverwort" width="200">
+        <h3>Liverwort</h3>
+          <p class="price">Rs.12</p>
+          <label for="quantity_liverwort">Quantity:</label>
+          <input type="number" id="quantity_liverwort" name="quantity_liverwort" min="1" value="1">
+          <input type="hidden" id="price_liverwort" value="12.00">
+          <button type="button" onclick="addToCart('Liverwort', parseFloat(document.getElementById('price_liverwort').value), parseInt(document.getElementById('quantity_liverwort').value));">Add to Cart</button>
+      </div>
+        <!-- Liverwort details go here -->
+
+    <!-- Placeholder for Ferns -->
+    <div class="product">
+        <img src="https://images.pexels.com/photos/1210288/pexels-photo-1210288.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ferns" width="200">
+        <h3>Ferns</h3>
+          <p class="price">Rs.20</p>
+          <label for="quantity_ferns">Quantity:</label>
+          <input type="number" id="quantity_ferns" name="quantity_ferns" min="1" value="1">
+          <input type="hidden" id="price_ferns" value="20.00">
+          <button type="button" onclick="addToCart('Ferns', parseFloat(document.getElementById('price_ferns').value), parseInt(document.getElementById('quantity_ferns').value));">Add to Cart</button>
+      </div>
+    <script src="cart.js"></script>
+</body>
+</html>
